@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 // Rutas
 app.post('/divide', (req, res) => {
+    console.log(req.body);
     const { num1, num2 } = req.body;
 
     if (num2 === 0) {

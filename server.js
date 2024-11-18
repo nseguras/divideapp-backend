@@ -6,7 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+    origin: 'https://nseguras.github.io' // La URL de tu frontend
+  };
+  
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // Rutas

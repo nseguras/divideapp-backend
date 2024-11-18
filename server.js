@@ -3,11 +3,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 // Middleware
 const corsOptions = {
-    origin: 'https://nseguras.github.io' // La URL de tu frontend
+    origin: 'https://nseguras.github.io/divide' // La URL de tu frontend
   };
   
 app.use(cors(corsOptions));

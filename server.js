@@ -21,6 +21,11 @@ app.post('/divide', (req, res) => {
     res.json({ result });
 });
 
+app.get('/', (req, res) => {
+    res.send('Servidor activo y funcionando correctamente');
+});
+
+
 // Iniciar servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);

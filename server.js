@@ -6,11 +6,16 @@ const app = express();
 const PORT = process.env.PORT || 10000;
 
 // Middleware
+//--
+
 const corsOptions = {
-    origin: 'https://nseguras.github.io/divide' // La URL de tu frontend
+    origin: 'https://nseguras.github.io/divide', // La URL de tu frontend
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
   };
-  
-app.use(cors(corsOptions));
+
+//app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(bodyParser.json());
 
